@@ -3,9 +3,9 @@ myApp.service('AppService',['$http', function($http) {
         const self = this;
 
     self.sayMsg = function(){
-        let msg = new SpeechSynthesisUtterance("Hello fomalhaut");
+        let msg = new SpeechSynthesisUtterance("B is for Bug");
         var voices = window.speechSynthesis.getVoices();
-        msg.voice = voices[25]; // Note: voices are unpredictable at the moment, still experimental tech. 7 is the clearest male, 17 the clearest female, 25 is good
+        msg.voice = voices[17]; // Note: voices are unpredictable at the moment, still experimental tech. 7 is the clearest male, 17 the clearest female, 25 is good
         msg.voiceURI = 'native';
         msg.volume = 2; // 0 to 1
         msg.rate = .8; // 0.1 to 10
